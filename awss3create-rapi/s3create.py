@@ -41,7 +41,7 @@ def main():
         print(response)
         print('\nCreated')
         print(response['Location'])
-
+    # Handle exceptions
     except botocore.exceptions.ClientError as e:
         if e.response['Error']['Code'] == "BucketAlreadyOwnedByYou":
             print("Error: Bucket already created and owned by you!!")

@@ -45,7 +45,7 @@ def main():
         }
         s3_client.copy(copy_source, destination_bucket_name, destination_key)
         print('Copied')
-
+    # Handle exceptions
     except botocore.exceptions.ClientError as e:
         if e.response['Error']['Code'] == "404":
             print("Error: Not Found, problem with the parameters!!")
