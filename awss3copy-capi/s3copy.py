@@ -23,7 +23,7 @@ def main():
               'Proper Usage is: python s3copy.py '\
               '<SOURCE_BUCKET> <SOURCE_OBJECT> <DESTINATION_BUCKET>')
         sys.exit(1)
-
+    #   
     source_bucket_name = args[0]
     source_key = args[1]
     destination_bucket_name = args[2]

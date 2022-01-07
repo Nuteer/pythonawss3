@@ -34,7 +34,7 @@ def main():
         if s3objects['KeyCount'] > 0:
             for s3object in s3objects['Contents']:
                 print(' - Object: ' + s3object['Key'])
-
+    # Handle exceptions
     except botocore.exceptions.ClientError as e:
         if e.response['Error']['Code'] == "NoSuchBucket":
             print("Error: Bucket does not exist!!")
